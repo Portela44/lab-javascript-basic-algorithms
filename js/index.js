@@ -60,4 +60,39 @@ function itemCounter (item, text) {
   return (counter);
 }
 console.log(itemCounter("et", loremIpsum));
-// Bonus 2: phrase to check
+// Bonus 2: palindrome checker
+function onlyLettersTogether (text) {
+    let justLetters = "";
+    for (let i = 0; i < text.length; i++) {
+      if ((text[i]!==" ") && (text[i]!==".") && (text[i]!=="!") && (text[i]!=="?") && (text[i]!==",") && (text[i]!=="'")) {
+        justLetters += text[i].toLowerCase();
+      }
+    }
+    return (justLetters);
+  } 
+  
+  function palindromeChecker (text) {
+    let palindromeContender = onlyLettersTogether(text);
+    let counter = 0;
+    for (let i = 0; i < palindromeContender.length; i++) {
+      if (palindromeContender[i] === palindromeContender[palindromeContender.length-1-i]) {
+        counter += 1;
+      }
+    }
+    return (counter === (palindromeContender.length))
+  }
+  
+  phraseToCheck = "stack cats"
+  console.log(palindromeChecker(phraseToCheck));
+  
+  /*
+  console.log(palindromeChecker("A man, a plan, a canal, Panama!"));
+  console.log(palindromeChecker("Amor, Roma"));
+  console.log(palindromeChecker("race car"));
+  console.log(palindromeChecker("stack cats"));
+  console.log(palindromeChecker("step on no pets"));
+  console.log(palindromeChecker("taco cat"));
+  console.log(palindromeChecker("put it up"));
+  console.log(palindromeChecker("Was it a car or a cat I saw?"));
+  console.log(palindromeChecker("No 'x' in Nixon"));
+  */
