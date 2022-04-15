@@ -12,7 +12,15 @@ if (hacker1.length > hacker2.length) {
     console.log(`Wow, you both have equally long names, ${hacker1.length} characters!`)
   }
 // Iteration 3: Loops
-
+// Iteration 3.1: driver name's letters in CAPS
+let hacker1InCaps = "";
+for (var i = 0; i < hacker1.length; i++) {
+  hacker1InCaps += hacker1[i].toUpperCase();
+  if (i<(hacker1.length-1)) {
+    hacker1InCaps += " ";
+  }
+}
+console.log(hacker1InCaps);
 // Bonus 1: lorem ipsum counter
 
 // Bonus 2: phrase to check
