@@ -36,5 +36,15 @@ if (hacker1 < hacker2) {
     console.log("What?! You both have the same name?");
   }
 // Bonus 1: lorem ipsum counter
-
+function itemCounter (item, text) {
+    let counter = 0;
+    textSplitInWords = text.split(" ");
+    for (let i = 0; i < textSplitInWords.length; i++) {
+        if (textSplitInWords[i].toLowerCase() === item.toLowerCase()) {
+        counter += 1;
+        }
+    }
+    return (counter);
+}
+console.log(itemCounter("et", loremIpsum));
 // Bonus 2: phrase to check
