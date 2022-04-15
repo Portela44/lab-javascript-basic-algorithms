@@ -28,7 +28,13 @@ for (let i = hacker2.length-1; i >= 0; i--) {
 }
 console.log(hacker2Reverse);
 // Iteration 3.3: lexicographic order
-
+if (hacker1 < hacker2) {
+    console.log("The driver's name goes first.");
+  } else if (hacker1 > hacker2) {
+    console.log("Yo, the navigator goes first definitely.");
+  } else {
+    console.log("What?! You both have the same name?");
+  }
 // Bonus 1: lorem ipsum counter
 
 // Bonus 2: phrase to check
