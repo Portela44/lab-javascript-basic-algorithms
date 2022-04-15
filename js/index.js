@@ -14,13 +14,21 @@ if (hacker1.length > hacker2.length) {
 // Iteration 3: Loops
 // Iteration 3.1: driver name's letters in CAPS
 let hacker1InCaps = "";
-for (var i = 0; i < hacker1.length; i++) {
+for (let i = 0; i < hacker1.length; i++) {
   hacker1InCaps += hacker1[i].toUpperCase();
   if (i<(hacker1.length-1)) {
     hacker1InCaps += " ";
   }
 }
 console.log(hacker1InCaps);
+// Iteration 3.2: navigator Reverse
+let hacker2Reverse = "";
+for (let i = hacker2.length-1; i >= 0; i--) {
+  hacker2Reverse += hacker2[i];
+}
+console.log(hacker2Reverse);
+// Iteration 3.3: lexicographic order
+
 // Bonus 1: lorem ipsum counter
 
 // Bonus 2: phrase to check
